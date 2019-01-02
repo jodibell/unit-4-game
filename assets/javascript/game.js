@@ -3,6 +3,15 @@ var wins = 0;
     losses = 0;
     userScore = 0;
 
+//We need variables to count number of times each crystal is clicked.
+var amethystCounter = 0;
+    potassiumCounter = 0;
+    sapphireCounter = 0;
+    rockCounter = 0;
+
+//Need a crystalArray.
+var crystalArray = ["Amethyst", "Potassium", "Blue Sapphire", "Rock Crystal"];
+
 //Array for computer score that starts at 19 and goes to 120.
 var computerScoreList = [];
 for (var i = 19; i<121; i++) {
@@ -19,8 +28,42 @@ for (var i = 1; i<13; i++) {
     crystalValues.push(i);
 }
 
-//Variable for random computer score.
-var randomCrystalValue = crystalValues [Math.floor(Math.random() * crystalValues.length)];
-console.log(randomCrystalValue);
+//Variables for each random crystal value.
+var randomAmethystValue = crystalValues [Math.floor(Math.random() * crystalValues.length)];
+console.log(randomAmethystValue);
 
-//We also need to create a for loop to run through the crystal value array and assign a random crystal value to each crystal.
+var randomPotassiumValue = crystalValues [Math.floor(Math.random() * crystalValues.length)];
+console.log(randomPotassiumValue);
+
+var randomSapphireValue = crystalValues [Math.floor(Math.random() * crystalValues.length)];
+console.log(randomSapphireValue);
+
+var randomRockValue = crystalValues [Math.floor(Math.random() * crystalValues.length)];
+console.log(randomRockValue);
+
+//Then, when a crystal is clicked, we need a click event that adds randomCrystalValue to the userScore.
+$("#amethyst").click(function() {
+    amethystCounter++;
+    alert(amethystCounter * randomAmethystValue);
+});
+
+$("#potassium").click(function() {
+    potassiumCounter++;
+    alert(potassiumCounter * randomPotassiumValue);
+});
+
+$("#sapphire").click(function() {
+    sapphireCounter++;
+    alert(sapphireCounter * randomSapphireValue);
+});
+
+$("#rock").click(function() {
+    rockCounter++;
+    alert(rockCounter * randomRockValue);
+});
+
+//Update userScore (add all crystal totals, which means create 4 more variables, or have a long multiplication string).
+
+//Conditional-if userScore < computerScore, do not reset/keep adding to userScore upon click events.
+//else if userScore === computerScore, then update wins++
+//else update losses++.
