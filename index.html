@@ -2,18 +2,34 @@
 
 <head>
     <title>Crystals Collector Game</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<link href="assets/css/reset.css">-->
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
     <h1>Jodi's Crystal Collector Game</h1>
-    <p>Click crystals until your total points equals the total points shown. Good luck!</p>
-    <div id="amethyst"><img src ="assets/images/Amethyst.jpg" width="200"></div>
-    <div id="potassium"><img src ="assets/images/Potassium.jpg" width="200"></div>
-    <div id="sapphire"><img src ="assets/images/Blue Sapphire.jpg" width="200"></div>
-    <div id="rock"><img src ="assets/images/Rock Crystal.jpg" width="200"></div>
-    
+    <p>Click crystals until your total points equal the total points shown. Good luck!</p>
+    <div id="amethyst" class="image"><img src ="assets/images/Amethyst.jpg" width="200"></div>
+    <div id="potassium" class="image"><img src ="assets/images/Potassium.jpg" width="200"></div>
+    <div id="sapphire" class="image"><img src ="assets/images/Blue Sapphire.jpg" width="200"></div>
+    <div id="rock" class="image"><img src ="assets/images/Rock Crystal.jpg" width="200"></div>
+    <br style="clear: left;" />
+
+    <div id="gameScore" class=container>
+        <h3>Computer's Score: </h3>
+        <h3>Your Score: </h3>
+    </div>
+    <div class="container">
+        <div id="totalWins">
+            <h3>Wins: </h3>
+        </div>
+        <div id="totalLosses">
+            <h3>Losses: </h3>
+        </div>
+    </div>
+    <br style="clear: left;" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 </body>
 

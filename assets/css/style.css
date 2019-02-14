@@ -1,0 +1,22 @@
+h1, p {
+    font-family: sans-serif;
+    margin-left: 10px;
+}
+
+.image {
+    float: left;
+    margin: 0px 5px 0px 5px;
+}
+
+.container {
+    background-color: rgb(37, 37, 37);
+    width: 390px;
+    float: left; 
+    margin: 5px;
+    padding: 10px;
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}

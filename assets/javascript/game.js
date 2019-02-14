@@ -30,28 +30,32 @@ scoreReset();
 $("#amethyst").click(function() {
     amethystCounter++;
     userScore = userScore + randomAmethystValue;
-    alert("Your Score: "+ userScore);
+    //alert("Your Score: "+ userScore);
+    displayResults();
     scoreCheck();
     });
 
 $("#potassium").click(function() {
     potassiumCounter++;
     userScore = userScore + randomPotassiumValue;
-    alert("Your Score: "+ userScore);
+    //alert("Your Score: "+ userScore);
+    displayResults();
     scoreCheck();
 });
 
 $("#sapphire").click(function() {
     sapphireCounter++;
     userScore = userScore + randomSapphireValue;
-    alert("Your Score: "+ userScore);
+    //alert("Your Score: "+ userScore);
+    displayResults();
     scoreCheck();
 });
 
 $("#rock").click(function() {
     rockCounter++;
     userScore = userScore + randomRockValue;
-    alert("Your Score: "+ userScore);
+    //alert("Your Score: "+ userScore);
+    displayResults();
     scoreCheck();
 });
 
@@ -59,6 +63,7 @@ function scoreCheck() {
     //if userScore === computerScore, then update wins++
     if (userScore === randomComputerScore) {
         wins++;
+        displayWins();   
         scoreReset();
         console.log("Wins: "+ wins);
     }
@@ -67,6 +72,7 @@ function scoreCheck() {
         losses++;
         scoreReset();
         console.log("Losses: "+ losses);
+        displayLosses();
     }
 }
 
@@ -90,6 +96,33 @@ function scoreReset() {
     console.log(randomRockValue);
 
     randomComputerScore = computerScoreList [Math.floor(Math.random() * computerScoreList.length)];
-    console.log("Comp Score: ", randomComputerScore);
+    console.log("Comp Score: " + randomComputerScore);
+
+    displayResults();
 }
+
+function displayResults() {
+    var gameScore = 
+    "<h3>Computer's Score: " + randomComputerScore + "</h3>" +
+    "<h3>Your Score: " + userScore + "</h3>";
+
+    document.getElementById("gameScore").innerHTML = gameScore;
+}
+
+//These functions aren't working, and I don't know why...
+function displayWins() {
+    var totalWins = 
+        "<h3>Wins: " + wins + "</h3>";
+        document.getElementById("totalWins").innerhtml = totalWins;
+}
+
+function displayLosses() {
+    var totalLosses = 
+    "<h3>Losses: " + losses + "</h3>";
+    document.getElementById("totalLosses").innerhtml = totalLosses;
+}
+    
+
+    
+
 
