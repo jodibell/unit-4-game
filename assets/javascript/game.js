@@ -4,11 +4,7 @@ var wins = 0;
     userScore = 0;
 
 //*We need variables to count number of times each crystal is clicked.
-var amethystCounter = 0;
-    potassiumCounter = 0;
-    sapphireCounter = 0;
-    rockCounter = 0;
-    randomAmethystValue = 0;
+var randomAmethystValue = 0;
     randomPotassiumValue = 0;
     randomSapphireValue = 0;
     randomRockValue = 0;
@@ -28,7 +24,6 @@ for (var i = 1; i<13; i++) {
 scoreReset();
 
 $("#amethyst").click(function() {
-    amethystCounter++;
     userScore = userScore + randomAmethystValue;
     //alert("Your Score: "+ userScore);
     displayResults();
@@ -36,7 +31,6 @@ $("#amethyst").click(function() {
     });
 
 $("#potassium").click(function() {
-    potassiumCounter++;
     userScore = userScore + randomPotassiumValue;
     //alert("Your Score: "+ userScore);
     displayResults();
@@ -44,7 +38,6 @@ $("#potassium").click(function() {
 });
 
 $("#sapphire").click(function() {
-    sapphireCounter++;
     userScore = userScore + randomSapphireValue;
     //alert("Your Score: "+ userScore);
     displayResults();
@@ -52,7 +45,6 @@ $("#sapphire").click(function() {
 });
 
 $("#rock").click(function() {
-    rockCounter++;
     userScore = userScore + randomRockValue;
     //alert("Your Score: "+ userScore);
     displayResults();
@@ -77,10 +69,6 @@ function scoreCheck() {
 }
 
 function scoreReset() {
-    amethystCounter = 0;
-    potassiumCounter = 0;
-    sapphireCounter = 0;
-    rockCounter = 0;
     userScore = 0;
     
     randomAmethystValue = crystalValues [Math.floor(Math.random() * crystalValues.length)];
@@ -117,7 +105,7 @@ function displayWinsLosses() {
     document.getElementById("winsLosses").innerHTML = totalScore;
 }
 
-//These functions aren't working, and I don't know why...
+//These functions weren't working, but now they are. Part of troubleshooting.
 /*function displayWins() {
     var totalWins = 
         "<h3>Wins: " + wins + "</h3>";
