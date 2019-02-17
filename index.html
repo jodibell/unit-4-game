@@ -8,7 +8,7 @@
 
 <body>
     <h1>Jodi's Crystal Collector Game</h1>
-    <p>Click crystals until your total points equal the total points shown. Good luck!</p>
+    <p>Each crystal has a set value, and each round these values will change. Click crystals until Your Score equals the Computer's Score without going over. Good luck!</p>
     <div id="amethyst" class="image"><img src ="assets/images/Amethyst.jpg" width="200"></div>
     <div id="potassium" class="image"><img src ="assets/images/Potassium.jpg" width="200"></div>
     <div id="sapphire" class="image"><img src ="assets/images/Blue Sapphire.jpg" width="200"></div>
@@ -19,14 +19,19 @@
         <h3>Computer's Score: </h3>
         <h3>Your Score: </h3>
     </div>
-    <div class="container">
+
+    <div id="winsLosses" class=container>
+        <h3>Wins: </h3>
+        <h3>Losses: </h3>
+    </div>
+    <!--<div class="container">
         <div id="totalWins">
             <h3>Wins: </h3>
         </div>
-        <div id="totalLosses">
-            <h3>Losses: </h3>
+        <div>
+            <h3 id="totalLosses">Losses: </h3>
         </div>
-    </div>
+    </div>-->
     <br style="clear: left;" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

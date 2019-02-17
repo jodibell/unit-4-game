@@ -62,9 +62,9 @@ $("#rock").click(function() {
 function scoreCheck() {
     //if userScore === computerScore, then update wins++
     if (userScore === randomComputerScore) {
-        wins++;
-        displayWins();   
+        wins++;  
         scoreReset();
+        displayWinsLosses();
         console.log("Wins: "+ wins);
     }
     //else update losses++.
@@ -72,7 +72,7 @@ function scoreCheck() {
         losses++;
         scoreReset();
         console.log("Losses: "+ losses);
-        displayLosses();
+        displayWinsLosses();
     }
 }
 
@@ -109,18 +109,24 @@ function displayResults() {
     document.getElementById("gameScore").innerHTML = gameScore;
 }
 
-//These functions aren't working, and I don't know why...
-function displayWins() {
-    var totalWins = 
-        "<h3>Wins: " + wins + "</h3>";
-        document.getElementById("totalWins").innerhtml = totalWins;
+function displayWinsLosses() {
+    var totalScore = 
+    "<h3>Wins: " + wins + "</h3>" +
+    "<h3>Losses: " + losses + "</h3>";
+
+    document.getElementById("winsLosses").innerHTML = totalScore;
 }
 
-function displayLosses() {
-    var totalLosses = 
-    "<h3>Losses: " + losses + "</h3>";
-    document.getElementById("totalLosses").innerhtml = totalLosses;
-}
+//These functions aren't working, and I don't know why...
+/*function displayWins() {
+    var totalWins = 
+        "<h3>Wins: " + wins + "</h3>";
+        document.getElementById("totalWins").innerHTML = totalWins;
+}*/
+
+/*function displayLosses() {
+    $('#totalLosses').text("Losses: " + losses);
+}*/
     
 
     
